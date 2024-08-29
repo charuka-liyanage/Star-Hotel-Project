@@ -42,7 +42,8 @@ const StaffDashboard = () => {
 							<th className="w-1/4 py-4 px-6 text-left text-gray-600 font-bold">Reserve Type</th>
 							<th className="w-1/4 py-4 px-6 text-left text-gray-600 font-bold">Number of Persons</th>
 							<th className="w-1/4 py-4 px-6 text-left text-gray-600 font-bold">Price</th>
-							<th className="w-1/4 py-4 px-6 text-left text-gray-600 font-bold">Status</th>
+							<th className="w-1/3 py-4 px-6 text-left text-gray-600 font-bold">Status</th>
+							
 						</tr>
 					</thead>
 					<tbody className="bg-white">
