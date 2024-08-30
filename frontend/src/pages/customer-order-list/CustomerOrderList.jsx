@@ -115,8 +115,11 @@ const CustomerOrderList = () => {
 									<td className="py-4 px-6 border-b border-gray-200">
 										<Link to={`/user/customer/pay/${elem._id}`}>
 											<button
-												className={`${elem.status === "COMPLETED" ? "bg-gray-400 cursor-not-allowed" : "bg-blue-500 hover:bg-blue-700"
-													} text-white font-bold py-2 px-4 rounded-full`}
+												className={`${
+													elem.status === "COMPLETED"
+														? "bg-gray-400 cursor-not-allowed"
+														: "bg-blue-500 hover:bg-blue-700"
+												} text-white font-bold py-2 px-4 rounded-full`}
 												disabled={elem.status === "COMPLETED"}
 											>
 												<FaCreditCard />

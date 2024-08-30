@@ -6,19 +6,16 @@ import PaymentAPI from "./api/PaymentAPI";
 const PaymentContext = createContext();
 
 export function PaymentProvider({ children }) {
+	const navigate = useNavigate();
 
-    const navigate = useNavigate();
+	const [payments, setPayments] = useState([]);
+	const [payment, setPayment] = useState({
+		username: "",
+		foodType: "",
+		price: "",
+	});
 
-    const [payments, setPayments] = useState([]);
-    const [payment, setPayment] = useState({
-
-        username: "",
-        foodType: "",
-        price: "",
-
-    });
-
-    const makePayment = async (values) => {
+	const makePayment = async (values) => {
 		try {
 			const response = await PaymentAPI.makePay(values);
 			setPayments([...payments, response.data]);
@@ -29,22 +26,19 @@ export function PaymentProvider({ children }) {
 		}
 	};
 
-
-    return (
-        <PaymentContext.Provider
-            value={{
-                payment,
-                setPayment,
-                payments,
-                setPayments,
-                makePayment,
-            }}
-        >
-            {children}
-        </PaymentContext.Provider>
-    )
-
-
+	return (
+		<PaymentContext.Provider
+			value={{
+				payment,
+				setPayment,
+				payments,
+				setPayments,
+				makePayment,
+			}}
+		>
+			{children}
+		</PaymentContext.Provider>
+	);
 }
 
 export default PaymentContext;

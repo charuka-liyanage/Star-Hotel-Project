@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 
 const PackageCreate = () => {
-
 	const { addPackage } = useContext(PackageContext);
 	const [image, setImage] = useState();
 
@@ -22,14 +21,12 @@ const PackageCreate = () => {
 			.then((res) => setImage(res.data.secure_url))
 
 			.catch((err) => console.log(err));
-	};
-
+	}
 
 	const handleSubmit = (e) => {
 		e.preventDefault();
 
 		const newPackage = {
-
 			name: e.target.name.value,
 			price: e.target.price.value,
 			packageType: e.target.packageType.value,
@@ -37,8 +34,7 @@ const PackageCreate = () => {
 			image: image,
 		};
 		addPackage(newPackage);
-	}
-
+	};
 
 	return (
 		<>
@@ -172,12 +168,9 @@ const PackageCreate = () => {
 						</div>
 					</form>
 				</div>
-
 			</div>
 
-			<div>
-				{image}
-			</div>
+			<div>{image}</div>
 		</>
 	);
 };

@@ -50,7 +50,6 @@ export function PackageProvider({ children }) {
 				console.log(" Status updated successfully...");
 			})
 			.catch((err) => {
-
 				console.log(err);
 			});
 	};

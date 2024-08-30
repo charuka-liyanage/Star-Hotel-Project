@@ -5,7 +5,6 @@ import requestConfigJson from "./requestConfigJson";
 const BASE_URL = import.meta.env.VITE_BACKEND_URL;
 
 class PackageAPI {
-	
 	static CreatePackages(values) {
 		return axios.post(`${BASE_URL}/user/admin/package`, values, requestConfigJson);
 	}

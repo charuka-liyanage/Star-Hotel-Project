@@ -77,10 +77,13 @@ const UsersDetails = () => {
 										<span className="bg-blue-500 font-bold text-white py-1 px-2 rounded-full text-xs">
 											{elem.permissionLevel}
 										</span>
-									</td>							
+									</td>
 
 									<td className="py-4 px-6 border-b border-gray-200">
-										<button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full" onClick={() => deleteCustomer(elem._id)}>
+										<button
+											className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded-full"
+											onClick={() => deleteCustomer(elem._id)}
+										>
 											<FaTrash />
 										</button>
 									</td>
