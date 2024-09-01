@@ -24,7 +24,14 @@ import {
 	editPackageDetails,
 } from "./Package.controller";
 
-import { insertOrder, getAllPending, getAllComplete, getAllOrders, changeOrderStatus, getOrderDetails, } from "./Order.controllers";
+import {
+	insertOrder,
+	getAllPending,
+	getAllComplete,
+	getAllOrders,
+	changeOrderStatus,
+	getOrderDetails,
+} from "./Order.controllers";
 
 import { insertPayment, getAllPayment } from "./Payment.controllers";
 
